@@ -1,26 +1,33 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
+import { HttpClientModule } from '@angular/common/http';
 import AppRoutingModule from './app-routing.module';
 import AppComponent from './app.component';
 import HeaderComponent from './components/header/header.component';
-import HeaderSearchComponent from './components/header-search/header-search.component';
-import HeaderFilterComponent from './components/header-filter/header-filter.component';
-import HeaderUserComponent from './components/header-user/header-user.component';
-import FilmsContainerComponent from './components/films-container/films-container.component';
-import FilmCardComponent from './components/film-card/film-card.component';
+import FilteringCriteriaBlockComponent from './components/filtering-criteria-block/filtering-criteria-block.component';
+import SearchResultsBlockComponent from './components/search-results-block/search-results-block.component';
+import SearchResultItemComponent from './components/search-result-item/search-result-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HeaderSearchComponent,
-    HeaderFilterComponent,
-    HeaderUserComponent,
-    FilmsContainerComponent,
-    FilmCardComponent,
+    FilteringCriteriaBlockComponent,
+    SearchResultsBlockComponent,
+    SearchResultItemComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    MatIconModule,
+    MatInputModule,
+    MatButtonModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
