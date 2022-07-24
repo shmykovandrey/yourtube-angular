@@ -12,17 +12,21 @@ export default class AppComponent {
 
   constructor(
     private matIconRegistry: MatIconRegistry,
-    private domSanitizer: DomSanitizer
+    private domSanitizer: DomSanitizer,
   ) {
     this.matIconRegistry.addSvgIcon(
       'logo',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/logo.svg')
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/logo.svg'),
     );
     this.matIconRegistry.addSvgIcon(
       'search_settings',
       this.domSanitizer.bypassSecurityTrustResourceUrl(
-        '../assets/search_settings.svg'
-      )
+        '../assets/search_settings.svg',
+      ),
+    );
+    this.matIconRegistry.addSvgIcon(
+      'login',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/login.svg'),
     );
   }
 }

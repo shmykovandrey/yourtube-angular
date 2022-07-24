@@ -4,15 +4,8 @@ export default interface Responce {
   kind: string;
   etag: string;
   pageInfo: {
-    totalResult: number;
+    totalResults: number;
     resultsPerPage: number;
   };
   items: Item[];
-  statistics: {
-    viewCount: string;
-    likeCount: string;
-    dislikeCount: string;
-    favoriteCount: string;
-    commentCount: string;
-  };
 }

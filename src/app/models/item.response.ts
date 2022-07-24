@@ -1,7 +1,7 @@
 interface Thumbnails {
   url: string;
   width: number;
-  heigth: number;
+  height: number;
 }
 
 export default interface Item {
@@ -17,17 +17,25 @@ export default interface Item {
       default: Thumbnails;
       medium: Thumbnails;
       high: Thumbnails;
-      standart: Thumbnails;
+      standard: Thumbnails;
       maxres: Thumbnails;
     };
+    channelTitle: string;
+    tags: string[];
+    categoryId: string;
+    liveBroadcastContent: string;
+    localized: {
+      title: string;
+      description: string;
+    };
+    defaultLanguage?: string;
+    defaultAudioLanguage: string;
   };
-  channelTitle: string;
-  tags: string[];
-  categoryId: string;
-  liveBroadcastContent: string;
-  localized: {
-    title: string;
-    description: string;
+  statistics: {
+    viewCount: string;
+    likeCount: string;
+    dislikeCount: string;
+    favoriteCount: string;
+    commentCount: string;
   };
-  defaultAudioLanguage: string;
 }
