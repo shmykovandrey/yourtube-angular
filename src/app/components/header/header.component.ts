@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import mochResponse from 'src/app/moch-response';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,10 +6,23 @@ import mochResponse from 'src/app/moch-response';
   styleUrls: ['./header.component.scss'],
 })
 export default class HeaderComponent {
+  @Output() newItemEvent = new EventEmitter<string>();
+
+  @Output() changeFilterEvent = new EventEmitter();
+
+  addNewItem(value: string) {
+    this.newItemEvent.emit(value);
+  }
+
+  changeFilterStateChild(): void {
+    console.log('child+');
+    this.changeFilterEvent.emit();
+  }
+
   inputValue?: string;
 
   onClick(): void {
-    console.log(this.inputValue);
+    // @Output() isFilterOn = true;
   }
 
   onInput(event: Event): void {

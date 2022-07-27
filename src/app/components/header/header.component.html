@@ -1,9 +1,9 @@
 <div class="header">
   <div class="header-action">
     <mat-icon svgIcon="logo" aria-hidden="false"></mat-icon>
-    <input matInput placeholder="What are you want to find out?" type="text" class="search-input" (input)="onInput($event)">
-    <button mat-raised-button color="primary" class="search-btn" (click)="onClick()">search</button>
-    <mat-icon svgIcon="search_settings" aria-hidden="false" class="btn filter-btn"></mat-icon>
+    <input matInput placeholder="What are you want to find out?" type="text" class="search-input" (change)="onInput($event)" #newItem>
+    <button mat-raised-button color="primary" class="search-btn" (click)="addNewItem(newItem.value)">search</button>
+    <mat-icon svgIcon="search_settings" aria-hidden="false" class="btn filter-btn" (click)="changeFilterStateChild()"></mat-icon>
   </div>
   <div class="login">
     <p class="login-p">Log in</p>
