@@ -42,6 +42,23 @@ export default class AppComponent implements OnInit {
       'login',
       this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/login.svg')
     );
+
+    this.matIconRegistry.addSvgIcon(
+      'viewed',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/viewed.svg')
+    );
+    this.matIconRegistry.addSvgIcon(
+      'liked',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/liked.svg')
+    );
+    this.matIconRegistry.addSvgIcon(
+      'dislike',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/dislike.svg')
+    );
+    this.matIconRegistry.addSvgIcon(
+      'comments',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('../assets/comments.svg')
+    );
   }
 
   ngOnInit() {
