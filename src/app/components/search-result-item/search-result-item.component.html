@@ -2,9 +2,9 @@
   <img *ngIf="item" class="card-img" [src]="item.snippet.thumbnails.medium.url" alt="asd">
   <div class="statisctics">
     <mat-icon svgIcon="viewed" aria-hidden="false" class="btn view-btn"></mat-icon>
-    <span *ngIf="item" class="view-count">{{item.statistics.viewCount}}</span>
+    <span *ngIf="item" class="view-count">{{item.statistics.viewCount | formatPipe}}</span>
     <mat-icon svgIcon="liked" aria-hidden="false" class="btn like-btn"></mat-icon>
-    <span *ngIf="item" class="like-count">{{item.statistics.likeCount}}</span>
+    <span *ngIf="item" class="like-count">{{item.statistics.likeCount | formatPipe}}</span>
     <mat-icon svgIcon="dislike" aria-hidden="false" class="btn dislike-btn"></mat-icon>
     <span *ngIf="item" class="dislike-count">{{item.statistics.dislikeCount}}</span>
     <mat-icon svgIcon="comments" aria-hidden="false" class="btn comment-btn"></mat-icon>

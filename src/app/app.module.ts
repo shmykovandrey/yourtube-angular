@@ -11,6 +11,7 @@ import HeaderComponent from './components/header/header.component';
 import FilteringCriteriaBlockComponent from './components/filtering-criteria-block/filtering-criteria-block.component';
 import SearchResultsBlockComponent from './components/search-results-block/search-results-block.component';
 import SearchResultItemComponent from './components/search-result-item/search-result-item.component';
+import FormatPipePipe from './pipes/format-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import SearchResultItemComponent from './components/search-result-item/search-re
     FilteringCriteriaBlockComponent,
     SearchResultsBlockComponent,
     SearchResultItemComponent,
+    FormatPipePipe,
   ],
   imports: [
     BrowserModule,
