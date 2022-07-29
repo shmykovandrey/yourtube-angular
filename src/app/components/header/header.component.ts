@@ -10,8 +10,11 @@ export default class HeaderComponent {
 
   @Output() changeFilterEvent = new EventEmitter();
 
-  addNewItem(value: string) {
-    this.newItemEvent.emit(value);
+  @Output() searchClickEvent = new EventEmitter();
+
+  searchClick(): void {
+    console.log('child +');
+    this.searchClickEvent.emit();
   }
 
   changeFilterStateChild(): void {

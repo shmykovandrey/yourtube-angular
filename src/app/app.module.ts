@@ -12,6 +12,7 @@ import FilteringCriteriaBlockComponent from './components/filtering-criteria-blo
 import SearchResultsBlockComponent from './components/search-results-block/search-results-block.component';
 import SearchResultItemComponent from './components/search-result-item/search-result-item.component';
 import FormatPipePipe from './pipes/format-pipe.pipe';
+import SortPipePipe from './pipes/sort-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import FormatPipePipe from './pipes/format-pipe.pipe';
     SearchResultsBlockComponent,
     SearchResultItemComponent,
     FormatPipePipe,
+    SortPipePipe,
   ],
   imports: [
     BrowserModule,

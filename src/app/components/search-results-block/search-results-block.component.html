@@ -1,3 +1,3 @@
-<div class="cards-wrapper">
-  <app-search-result-item *ngFor="let item of items" [item]="item"></app-search-result-item>
+<div *ngIf="isSearchLoaded" class="cards-wrapper">
+  <app-search-result-item *ngFor="let item of items|sortPipe:sortFilter" [item]="item"></app-search-result-item>
 </div>
