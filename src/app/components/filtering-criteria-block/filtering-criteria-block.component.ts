@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-filtering-criteria-block',
@@ -7,4 +7,10 @@ import { Component, Input } from '@angular/core';
 })
 export default class FilteringCriteriaBlockComponent {
   @Input() isFilterOn: boolean | undefined;
+
+  @Output() filterByDateEvent = new EventEmitter();
+
+  filterByDate() {
+    this.filterByDateEvent.emit();
+  }
 }

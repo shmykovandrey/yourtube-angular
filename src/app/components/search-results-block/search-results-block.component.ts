@@ -11,16 +11,13 @@ import Item from 'src/app/models/Item.response';
 export default class SearchResultsBlockComponent implements OnInit {
   @Input() isSearchLoaded: boolean = false;
 
-  @Input() searchFilter: SearchFilter | null = null;
+  @Input() searchFilter: SearchFilter = {
+    byDate: 'none',
+    byCount: 'none',
+    byWord: '',
+  };
 
   items: Item[] = mochResponse.items;
 
-  sortFilter = 'byLikes';
-
-  ngOnInit() {
-    console.log(this.searchFilter);
-    console.log(this.searchFilter?.byDate);
-    if (this.searchFilter) this.searchFilter.byDate += 1;
-    console.log(this.searchFilter?.byDate);
-  }
+  ngOnInit() {}
 }

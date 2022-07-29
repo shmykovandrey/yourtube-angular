@@ -12,10 +12,24 @@ export default class AppComponent implements OnInit {
   title = 'youtube-angular';
 
   searchFilter: SearchFilter = {
-    byDate: 4,
-    byCount: 0,
+    byDate: 'down',
+    byCount: 'none',
     byWord: '',
   };
+
+  filterByDate(): void {
+    if (this.searchFilter.byDate === 'none') {
+      this.searchFilter.byDate = 'up';
+      return;
+    }
+    if (this.searchFilter.byDate === 'up') {
+      this.searchFilter.byDate = 'down';
+      return;
+    }
+    if (this.searchFilter.byDate === 'down') {
+      this.searchFilter.byDate = 'none';
+    }
+  }
 
   isSearchLoaded: boolean = false;
 

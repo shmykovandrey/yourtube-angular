@@ -1,8 +1,4 @@
-enum FilterSelector {
-  none,
-  true,
-  false,
-}
+type FilterSelector = 'none' | 'up' | 'down';
 
 export default interface SearchFilter {
   byDate: FilterSelector;

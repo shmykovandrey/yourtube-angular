@@ -1,5 +1,5 @@
 <app-header 
  (changeFilterEvent)="changeFilterState()"
  (searchClickEvent)="searchItem()"></app-header>
-<app-filtering-criteria-block [isFilterOn]="isFilterOn"></app-filtering-criteria-block>
+<app-filtering-criteria-block [isFilterOn]="isFilterOn" (filterByDateEvent)="filterByDate()"></app-filtering-criteria-block>
 <app-search-results-block [isSearchLoaded]="isSearchLoaded" [searchFilter]="searchFilter"></app-search-results-block>
