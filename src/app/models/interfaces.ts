@@ -1,4 +1,4 @@
-type FilterSelector = 'none' | 'up' | 'down';
+type FilterSelector = null | boolean;
 
 export default interface SearchFilter {
   byDate: FilterSelector;

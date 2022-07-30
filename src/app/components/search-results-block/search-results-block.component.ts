@@ -12,8 +12,8 @@ export default class SearchResultsBlockComponent implements OnInit {
   @Input() isSearchLoaded: boolean = false;
 
   @Input() searchFilter: SearchFilter = {
-    byDate: 'none',
-    byCount: 'none',
+    byDate: null,
+    byCount: null,
     byWord: '',
   };
 

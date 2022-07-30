@@ -13,6 +13,7 @@ import SearchResultsBlockComponent from './components/search-results-block/searc
 import SearchResultItemComponent from './components/search-result-item/search-result-item.component';
 import FormatPipePipe from './pipes/format-pipe.pipe';
 import SortPipePipe from './pipes/sort-pipe.pipe';
+import FilterByWordPipe from './pipes/filter-by-word.pipe';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import SortPipePipe from './pipes/sort-pipe.pipe';
     SearchResultItemComponent,
     FormatPipePipe,
     SortPipePipe,
+    FilterByWordPipe,
   ],
   imports: [
     BrowserModule,

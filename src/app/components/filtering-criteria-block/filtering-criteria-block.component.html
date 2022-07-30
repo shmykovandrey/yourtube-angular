@@ -1,7 +1,8 @@
 <div *ngIf=isFilterOn class="filter__wrapper">
   <span>Sorting by:</span>
   <a href="#" class="filter__btn-date btn" (click)="filterByDate()">date</a>
-  <a href="#" class="filter__btn-count btn">count of views</a>
+  <a href="#" class="filter__btn-count btn"
+  (click)="filterByCount()">count of views</a>
   <a href="#" class="filter__btn-word btn">by word or sentance</a>
-  <input type="text" class="filter__input">
+  <input type="text" class="filter__input" (input)="filterByWord($event)">
 </div>
