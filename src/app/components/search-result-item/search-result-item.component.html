@@ -1,4 +1,4 @@
-<div class="card-wrapper">
+<div class="card-wrapper" [appColoredByDate]="item?.snippet?.publishedAt">
   <img *ngIf="item" class="card-img" [src]="item.snippet.thumbnails.medium.url" alt="asd">
   <div class="statisctics">
     <mat-icon svgIcon="viewed" aria-hidden="false" class="btn view-btn"></mat-icon>
@@ -12,4 +12,5 @@
   </div>
   <h2 *ngIf="item" class="card-title">{{item.snippet.title}}</h2>
   <button mat-raised-button color="primary" class="more-btn">more...</button>
+  <div appColoredByDate></div>
 </div>
