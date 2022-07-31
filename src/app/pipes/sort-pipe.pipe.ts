@@ -1,4 +1,4 @@
-import {Pipe, PipeTransform} from '@angular/core';
+import { Pipe, PipeTransform } from '@angular/core';
 import SearchFilter from '../models/interfaces';
 import Item from '../models/Item.response';
 
@@ -13,12 +13,12 @@ export default class SortPipePipe implements PipeTransform {
         ? value.sort(
             (elem1, elem2) =>
               new Date(elem1.snippet.publishedAt).valueOf() -
-              new Date(elem2.snippet.publishedAt).valueOf()
+              new Date(elem2.snippet.publishedAt).valueOf(),
           )
         : value.sort(
             (elem1, elem2) =>
               new Date(elem2.snippet.publishedAt).valueOf() -
-              new Date(elem1.snippet.publishedAt).valueOf()
+              new Date(elem1.snippet.publishedAt).valueOf(),
           );
     }
     if (sortFilter?.byCount !== null) {

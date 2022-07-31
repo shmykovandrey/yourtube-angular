@@ -1,5 +1,3 @@
-<p>{{searchFilter.byDate}}</p>
-
 <div *ngIf="isSearchLoaded" class="cards-wrapper">
   <app-search-result-item *ngFor="let item of items|sortPipe:searchFilter|filterByWord:searchFilter" [item]="item"></app-search-result-item>
 </div>
