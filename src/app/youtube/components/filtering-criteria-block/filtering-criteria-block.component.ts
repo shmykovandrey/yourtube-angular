@@ -1,4 +1,5 @@
-import {Component, Input, Output, EventEmitter} from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import YoutubeService from '../../services/youtube.service';
 
 @Component({
   selector: 'app-filtering-criteria-block',
@@ -6,6 +7,8 @@ import {Component, Input, Output, EventEmitter} from '@angular/core';
   styleUrls: ['./filtering-criteria-block.component.scss'],
 })
 export default class FilteringCriteriaBlockComponent {
+  constructor(private youtube: YoutubeService) {}
+
   @Input() isFilterOn: boolean | undefined;
 
   @Output() filterByDateEvent = new EventEmitter();
@@ -13,6 +16,8 @@ export default class FilteringCriteriaBlockComponent {
   @Output() filterByCountEvent = new EventEmitter();
 
   @Output() filterByWordEvent = new EventEmitter();
+
+  test = this.youtube.test;
 
   filterByDate() {
     this.filterByDateEvent.emit();
