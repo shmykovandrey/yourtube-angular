@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import Item from 'src/app/models/Item.response';
 
 @Component({
@@ -8,6 +8,8 @@ import Item from 'src/app/models/Item.response';
 })
 export default class SearchResultItemComponent implements OnInit {
   @Input() item: Item | null = null;
+
+  test = 'test';
 
   ngOnInit() {
     // if (this.item?.statistics.viewCount) {

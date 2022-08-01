@@ -12,6 +12,9 @@ import FilteringCriteriaBlockComponent from './components/filtering-criteria-blo
 import SearchResultsBlockComponent from './components/search-results-block/search-results-block.component';
 import SearchResultItemComponent from './components/search-result-item/search-result-item.component';
 import FormatPipePipe from './pipes/format-pipe.pipe';
+import SortPipePipe from './pipes/sort-pipe.pipe';
+import FilterByWordPipe from './pipes/filter-by-word.pipe';
+import ColoredByDateDirective from './directives/colored-by-date.directive';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,9 @@ import FormatPipePipe from './pipes/format-pipe.pipe';
     SearchResultsBlockComponent,
     SearchResultItemComponent,
     FormatPipePipe,
+    SortPipePipe,
+    FilterByWordPipe,
+    ColoredByDateDirective,
   ],
   imports: [
     BrowserModule,

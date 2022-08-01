@@ -10,12 +10,13 @@ export default class HeaderComponent {
 
   @Output() changeFilterEvent = new EventEmitter();
 
-  addNewItem(value: string) {
-    this.newItemEvent.emit(value);
+  @Output() searchClickEvent = new EventEmitter();
+
+  searchClick(): void {
+    this.searchClickEvent.emit();
   }
 
   changeFilterStateChild(): void {
-    console.log('child+');
     this.changeFilterEvent.emit();
   }
 
@@ -27,6 +28,5 @@ export default class HeaderComponent {
 
   onInput(event: Event): void {
     const target = event.target as HTMLInputElement;
-    console.log(target.value);
   }
 }
