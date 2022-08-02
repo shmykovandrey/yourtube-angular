@@ -1,7 +1,9 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import SearchFilter from 'src/app/models/interfaces';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
 export default class YoutubeService {
   test = 'testService';
 

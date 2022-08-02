@@ -26,6 +26,5 @@ import YoutubeService from './services/youtube.service';
     SearchResultsBlockComponent,
     SearchResultItemComponent,
   ],
-  providers: [YoutubeService],
 })
 export default class YoutubeModule {}

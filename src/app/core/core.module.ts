@@ -8,6 +8,5 @@ import YoutubeService from '../youtube/services/youtube.service';
   declarations: [HeaderComponent],
   imports: [CommonModule, SharedModule],
   exports: [HeaderComponent],
-  providers: [YoutubeService],
 })
 export default class CoreModule {}
