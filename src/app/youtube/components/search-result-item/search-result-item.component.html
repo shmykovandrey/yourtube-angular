@@ -11,5 +11,5 @@
     <span *ngIf="item" class="comment-count">{{item.statistics.commentCount}}</span>
   </div>
   <h2 *ngIf="item" class="card-title">{{item.snippet.title}}</h2>
-  <button mat-raised-button color="primary" class="more-btn">more...</button>
+  <button mat-raised-button color="primary" class="more-btn" (click)="moreClick()" >more...</button>
 </div>

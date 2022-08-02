@@ -1,5 +1,4 @@
-<!-- <div *ngIf="isSearchLoaded" class="cards-wrapper"> -->
+<div *ngIf="youtube.isSearchLoaded" class="cards-wrapper">
 <div class="cards-wrapper">
-  <p>{{isSearchLoaded}}</p>
-  <app-search-result-item *ngFor="let item of items|sortPipe:searchFilter|filterByWord:searchFilter" [item]="item"></app-search-result-item>
+  <app-search-result-item *ngFor="let item of items|sortPipe:youtube.searchFilter|filterByWord:youtube.searchFilter" [item]="item"></app-search-result-item>
 </div>
