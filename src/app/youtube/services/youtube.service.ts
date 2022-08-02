@@ -1,4 +1,4 @@
-import { Injectable, EventEmitter } from '@angular/core';
+import { Injectable, EventEmitter, ChangeDetectorRef } from '@angular/core';
 import SearchFilter from 'src/app/models/interfaces';
 
 @Injectable({
@@ -43,6 +43,7 @@ export default class YoutubeService {
     console.log('search start');
     console.log(this.isSearchLoaded);
     this.isSearchLoaded = true;
+    changeDetecrion = new ChangeDetectorRef();
     console.log(this.isSearchLoaded);
   }
 
