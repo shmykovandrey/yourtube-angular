@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 
@@ -7,7 +7,7 @@ import { DomSanitizer } from '@angular/platform-browser';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export default class AppComponent implements OnInit {
+export default class AppComponent {
   title = 'youtube-angular';
 
   constructor(private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer) {
@@ -41,6 +41,4 @@ export default class AppComponent implements OnInit {
       this.domSanitizer.bypassSecurityTrustResourceUrl('assets/comments.svg'),
     );
   }
-
-  ngOnInit() {}
 }

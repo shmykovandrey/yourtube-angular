@@ -8,7 +8,6 @@ import SortPipePipe from './pipes/sort-pipe.pipe';
 import FilterByWordPipe from './pipes/filter-by-word.pipe';
 import ColoredByDateDirective from './directives/colored-by-date.directive';
 import SharedModule from '../shared/shared.module';
-import YoutubeService from './services/youtube.service';
 
 @NgModule({
   declarations: [

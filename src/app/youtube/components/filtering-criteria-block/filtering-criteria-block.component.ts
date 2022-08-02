@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import YoutubeService from '../../services/youtube.service';
 
 @Component({
@@ -7,9 +7,7 @@ import YoutubeService from '../../services/youtube.service';
   styleUrls: ['./filtering-criteria-block.component.scss'],
 })
 export default class FilteringCriteriaBlockComponent {
-  constructor(private youtube: YoutubeService) {}
-
-  @Input() isFilterOn: boolean | undefined;
+  constructor(public youtube: YoutubeService) {}
 
   filterByDate() {
     this.youtube.filterByDate();
