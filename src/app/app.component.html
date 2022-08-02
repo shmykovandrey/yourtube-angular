@@ -1,10 +1,4 @@
-<app-header 
- (changeFilterEvent)="changeFilterState()"
- (searchClickEvent)="searchItem()"></app-header>
-<app-filtering-criteria-block 
- [isFilterOn]="isFilterOn"
- (filterByDateEvent)="filterByDate()"
- (filterByCountEvent)="filterByCount()"
- (filterByWordEvent)="filterByWord($event)"
- ></app-filtering-criteria-block>
-<app-search-results-block [isSearchLoaded]="isSearchLoaded" [searchFilter]="searchFilter"></app-search-results-block>
+<app-header></app-header>
+<app-filtering-criteria-block></app-filtering-criteria-block>
+<!-- <app-search-results-block [isSearchLoaded]="isSearchLoaded" [searchFilter]="searchFilter"></app-search-results-block> -->
+<app-search-results-block></app-search-results-block>

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
-import SearchFilter from './models/interfaces';
 
 @Component({
   selector: 'app-root',
@@ -10,46 +9,6 @@ import SearchFilter from './models/interfaces';
 })
 export default class AppComponent implements OnInit {
   title = 'youtube-angular';
-
-  searchFilter: SearchFilter = {
-    byDate: null,
-    byCount: null,
-    byWord: '',
-  };
-
-  filterByDate(): void {
-    this.searchFilter.byCount = null;
-    if (this.searchFilter.byDate !== null) {
-      this.searchFilter.byDate = !this.searchFilter.byDate;
-      return;
-    }
-    this.searchFilter.byDate = true;
-  }
-
-  filterByCount(): void {
-    this.searchFilter.byDate = null;
-    if (this.searchFilter.byCount !== null) {
-      this.searchFilter.byCount = !this.searchFilter.byCount;
-      return;
-    }
-    this.searchFilter.byCount = true;
-  }
-
-  filterByWord(inputValue: string): void {
-    this.searchFilter.byWord = inputValue;
-  }
-
-  isSearchLoaded: boolean = false;
-
-  isFilterOn: boolean = false;
-
-  searchItem() {
-    this.isSearchLoaded = true;
-  }
-
-  changeFilterState() {
-    this.isFilterOn = !this.isFilterOn;
-  }
 
   constructor(private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer) {
     this.matIconRegistry.addSvgIcon(
@@ -83,7 +42,5 @@ export default class AppComponent implements OnInit {
     );
   }
 
-  ngOnInit() {
-    this.isFilterOn = false;
-  }
+  ngOnInit() {}
 }

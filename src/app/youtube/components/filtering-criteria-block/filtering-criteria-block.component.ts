@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import YoutubeService from '../../services/youtube.service';
 
 @Component({
@@ -11,23 +11,16 @@ export default class FilteringCriteriaBlockComponent {
 
   @Input() isFilterOn: boolean | undefined;
 
-  @Output() filterByDateEvent = new EventEmitter();
-
-  @Output() filterByCountEvent = new EventEmitter();
-
-  @Output() filterByWordEvent = new EventEmitter();
-
-  test = this.youtube.test;
-
   filterByDate() {
-    this.filterByDateEvent.emit();
+    this.youtube.filterByDate();
   }
 
   filterByCount() {
-    this.filterByCountEvent.emit();
+    this.youtube.filterByCount();
   }
 
-  filterByWord(event: any) {
-    this.filterByWordEvent.emit(event.target.value);
+  filterByWord(event: Event) {
+    const target = event.target as HTMLInputElement;
+    this.youtube.filterByWord(target.value);
   }
 }

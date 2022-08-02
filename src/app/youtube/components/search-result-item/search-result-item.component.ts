@@ -1,5 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import Item from 'src/app/models/Item.response';
+import YoutubeService from '../../services/youtube.service';
 
 @Component({
   selector: 'app-search-result-item',
@@ -7,9 +8,9 @@ import Item from 'src/app/models/Item.response';
   styleUrls: ['./search-result-item.component.scss'],
 })
 export default class SearchResultItemComponent implements OnInit {
-  @Input() item: Item | null = null;
+  constructor(private youtube: YoutubeService) {}
 
-  test = 'test';
+  @Input() item: Item | null = null;
 
   ngOnInit() {
     // if (this.item?.statistics.viewCount) {

@@ -1,6 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import SearchFilter from '../../models/interfaces';
-// import Item from '../../models/Item.response';
 import Item from '../../models/Item.response';
 
 @Pipe({

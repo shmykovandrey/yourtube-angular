@@ -1,4 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+import YoutubeService from 'src/app/youtube/services/youtube.service';
 
 @Component({
   selector: 'app-header',
@@ -6,18 +7,18 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export default class HeaderComponent {
-  @Output() newItemEvent = new EventEmitter<string>();
+  constructor(private youtube: YoutubeService) {}
 
   @Output() changeFilterEvent = new EventEmitter();
 
-  @Output() searchClickEvent = new EventEmitter();
-
   searchClick(): void {
-    this.searchClickEvent.emit();
+    // this.searchClickEvent.emit();
+    this.youtube.searchItem();
   }
 
   changeFilterStateChild(): void {
-    this.changeFilterEvent.emit();
+    // this.changeFilterEvent.emit();
+    this.youtube.changeFilterState();
   }
 
   inputValue?: string;
