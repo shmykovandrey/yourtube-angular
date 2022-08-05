@@ -1,4 +1,4 @@
-import Item from './Item.response';
+import Item from './item.response';
 
 export default interface Responce {
   kind: string;

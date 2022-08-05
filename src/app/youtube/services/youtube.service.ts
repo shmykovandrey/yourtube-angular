@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import SearchFilter from 'src/app/models/interfaces';
+import SearchFilter from 'src/app/youtube/models/interfaces';
 
 @Injectable({
   providedIn: 'root',

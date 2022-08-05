@@ -12,12 +12,10 @@ export default class HeaderComponent {
   @Output() changeFilterEvent = new EventEmitter();
 
   searchClick(): void {
-    // this.searchClickEvent.emit();
     this.youtube.searchItem();
   }
 
   changeFilterStateChild(): void {
-    // this.changeFilterEvent.emit();
     this.youtube.changeFilterState();
   }
 

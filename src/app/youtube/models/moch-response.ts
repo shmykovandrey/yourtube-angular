@@ -1,4 +1,4 @@
-import Responce from './models/response';
+import Responce from './response';
 
 const mochResponse: Responce = {
   kind: 'youtube#videoListResponse',

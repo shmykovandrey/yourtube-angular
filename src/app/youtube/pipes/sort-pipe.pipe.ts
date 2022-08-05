@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import SearchFilter from '../../models/interfaces';
-import Item from '../../models/Item.response';
+import SearchFilter from '../models/interfaces';
+import Item from '../models/item.response';
 
 @Pipe({
   name: 'sortPipe',
@@ -11,13 +11,15 @@ export default class SortPipePipe implements PipeTransform {
     if (sortFilter?.byDate !== null) {
       return sortFilter?.byDate
         ? value.sort(
-          (elem1, elem2) => new Date(elem1.snippet.publishedAt).valueOf()
-              - new Date(elem2.snippet.publishedAt).valueOf(),
-        )
+            (elem1, elem2) =>
+              new Date(elem1.snippet.publishedAt).valueOf() -
+              new Date(elem2.snippet.publishedAt).valueOf(),
+          )
         : value.sort(
-          (elem1, elem2) => new Date(elem2.snippet.publishedAt).valueOf()
-              - new Date(elem1.snippet.publishedAt).valueOf(),
-        );
+            (elem1, elem2) =>
+              new Date(elem2.snippet.publishedAt).valueOf() -
+              new Date(elem1.snippet.publishedAt).valueOf(),
+          );
     }
     if (sortFilter?.byCount !== null) {
       return sortFilter?.byCount

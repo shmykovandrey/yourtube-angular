@@ -8,6 +8,8 @@ import SortPipePipe from './pipes/sort-pipe.pipe';
 import FilterByWordPipe from './pipes/filter-by-word.pipe';
 import ColoredByDateDirective from './directives/colored-by-date.directive';
 import SharedModule from '../shared/shared.module';
+import PageNotFoundComponent from './pages/page-not-found/page-not-found.component';
+import PageMainSearchResultComponent from './pages/page-main-search-result/page-main-search-result.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import SharedModule from '../shared/shared.module';
     SortPipePipe,
     FilterByWordPipe,
     ColoredByDateDirective,
+    PageNotFoundComponent,
+    PageMainSearchResultComponent,
   ],
   imports: [CommonModule, SharedModule],
   exports: [

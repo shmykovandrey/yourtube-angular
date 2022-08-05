@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import Item from '../../models/Item.response';
-import SearchFilter from '../../models/interfaces';
+import Item from '../models/item.response';
+import SearchFilter from '../models/interfaces';
 
 @Pipe({
   name: 'filterByWord',

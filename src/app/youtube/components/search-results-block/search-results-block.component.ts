@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import mochResponse from 'src/app/moch-response';
-import Item from 'src/app/models/Item.response';
+import mochResponse from 'src/app/youtube/models/moch-response';
+import Item from '../../models/item.response';
 import YoutubeService from '../../services/youtube.service';
 
 @Component({

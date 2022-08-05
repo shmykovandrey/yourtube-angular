@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import PageNotFoundComponent from './page-not-found/page-not-found.component';
-import SearchResultsBlockComponent from './youtube/components/search-results-block/search-results-block.component';
+import PageNotFoundComponent from './youtube/pages/page-not-found/page-not-found.component';
+import PageMainSearchResultComponent from './youtube/pages/page-main-search-result/page-main-search-result.component';
 
 const routes: Routes = [
   {
     path: '404',
     component: PageNotFoundComponent,
   },
-  { path: '', component: SearchResultsBlockComponent },
+  { path: '', component: PageMainSearchResultComponent },
+  { path: 'login', component: PageNotFoundComponent },
+  { path: 'detailed/:id', component: PageNotFoundComponent },
 ];
 
 @NgModule({
