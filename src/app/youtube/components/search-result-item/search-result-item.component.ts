@@ -12,5 +12,7 @@ export default class SearchResultItemComponent {
 
   @Input() item: Item | null = null;
 
-  moreClick(): void {}
+  moreClick(): void {
+    console.log('more click');
+  }
 }

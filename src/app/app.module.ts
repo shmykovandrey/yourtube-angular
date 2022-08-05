@@ -8,9 +8,10 @@ import AppRoutingModule from './app-routing.module';
 import CoreModule from './core/core.module';
 import YoutubeModule from './youtube/youtube.module';
 import SharedModule from './shared/shared.module';
+import PageNotFoundComponent from './page-not-found/page-not-found.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, PageNotFoundComponent],
   imports: [
     SharedModule,
     YoutubeModule,
