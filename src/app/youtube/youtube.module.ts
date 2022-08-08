@@ -10,6 +10,7 @@ import ColoredByDateDirective from './directives/colored-by-date.directive';
 import SharedModule from '../shared/shared.module';
 import PageNotFoundComponent from './pages/page-not-found/page-not-found.component';
 import PageMainSearchResultComponent from './pages/page-main-search-result/page-main-search-result.component';
+import PageLoginComponent from './pages/page-login/page-login.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import PageMainSearchResultComponent from './pages/page-main-search-result/page-
     ColoredByDateDirective,
     PageNotFoundComponent,
     PageMainSearchResultComponent,
+    PageLoginComponent,
   ],
   imports: [CommonModule, SharedModule],
   exports: [

@@ -1,5 +1,6 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import YoutubeService from 'src/app/youtube/services/youtube.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +8,7 @@ import YoutubeService from 'src/app/youtube/services/youtube.service';
   styleUrls: ['./header.component.scss'],
 })
 export default class HeaderComponent {
-  constructor(private youtube: YoutubeService) {}
+  constructor(private router: Router, private youtube: YoutubeService) {}
 
   @Output() changeFilterEvent = new EventEmitter();
 
@@ -23,6 +24,10 @@ export default class HeaderComponent {
 
   onClick(): void {
     // @Output() isFilterOn = true;
+  }
+
+  loginClick(): void {
+    this.router.navigate(['/login']);
   }
 
   onInput(event: Event): void {

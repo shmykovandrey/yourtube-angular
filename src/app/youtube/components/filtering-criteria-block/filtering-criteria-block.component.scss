@@ -1,6 +1,17 @@
 .btn {
   margin: 0px 5px;
+  color: #2f80ed;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-decoration-line: underline;
+  &:hover {
+    cursor: pointer;
+  }
 }
+
 .filter__wrapper {
   max-width: 1440px;
   margin: 0 auto;
@@ -9,7 +20,4 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.filter__input {
 }
