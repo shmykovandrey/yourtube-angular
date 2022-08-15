@@ -1,0 +1,68 @@
+.card-wrapper {
+  width: 263px;
+  height: 327px;
+  background-color: #e5e5e5;
+  position: relative;
+}
+
+.card-img {
+  width: calc(100% - 40px);
+  padding: 20px 20px 5px;
+}
+
+.statisctics {
+  margin: 0 auto;
+  padding: 0px 10px;
+  height: 13px;
+  width: 203px;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.more-btn {
+  max-width: 120px;
+  width: 100%;
+  position: absolute;
+  bottom: 20px;
+  left: 71px;
+}
+
+.card-title {
+  font-size: 16px;
+  padding: 5px 20px;
+  line-height: 1.5;
+}
+
+.view-btn {
+  min-width: 20px;
+  min-height: 13px;
+  background-image: url('/assets/viewed.svg');
+  background-position: center;
+  background-size: cover;
+}
+
+.like-btn {
+  min-width: 15px;
+  min-height: 13px;
+  background-image: url('/assets/liked.svg');
+  background-position: center;
+  background-size: cover;
+}
+
+.dislike-btn {
+  min-width: 15px;
+  min-height: 13px;
+  background-image: url('/assets/dislike.svg');
+  background-position: center;
+  background-size: cover;
+}
+
+.comment-btn {
+  min-width: 13px;
+  min-height: 13px;
+  background-image: url('/assets/comments.svg');
+  background-position: center;
+  background-size: cover;
+}

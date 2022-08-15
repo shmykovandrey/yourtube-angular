@@ -1,0 +1,28 @@
+.pnf__wrapper {
+  max-width: 1440px;
+  width: 100%;
+  height: calc(100vh - 130px);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pnf__logo {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-image: url('/assets/404.svg');
+  background-position: center;
+  background-size: cover;
+}
+
+.pnf__text {
+  display: inline-block;
+  font-size: 40px;
+  width: 270px;
+  line-height: 45px;
+  margin: 0px 0px 0px 20px;
+  color: #828282;
+  height: 100px;
+}

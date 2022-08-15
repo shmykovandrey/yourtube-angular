@@ -1,0 +1,7 @@
+<div *ngIf=youtube.isFilterOn class="filter__wrapper">
+  <span>Sorting by:</span>
+  <span class="filter__btn-date btn" (click)="filterByDate()">date</span>
+  <span class="filter__btn-count btn"
+  (click)="filterByCount()">count of views</span>
+  <input type="text" class="filter__input" (input)="filterByWord($event)" placeholder="by word or sentance">
+</div>
