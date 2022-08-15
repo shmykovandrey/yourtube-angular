@@ -22,9 +22,7 @@ export default class HeaderComponent {
 
   inputValue?: string;
 
-  onClick(): void {
-    // @Output() isFilterOn = true;
-  }
+  onClick(): void {}
 
   loginClick(): void {
     this.router.navigate(['/login']);
